@@ -2,10 +2,10 @@
 window.onload = function(){
 	// Buttons
 	var quickAddBtn = document.getElementById('QuickAdd');
-	var quickAddFormDiv = document.querySelector('.quickaddForm')
-    // document.getElementsByClassName('quickaddForm')[0]
-	var cancelBtn = document.getElementById('Cancel');
 	var AddBtn = document.getElementById('Add');
+	var cancelBtn = document.getElementById('Cancel');
+	var quickAddFormDiv = document.querySelector('.quickaddForm')
+ 	   // document.getElementsByClassName('quickaddForm')[0]
   
 	// Form Fields
 	var First_name = document.getElementById('First_name');
@@ -20,7 +20,7 @@ window.onload = function(){
 	// Storage Array
 	var addressBook = [];
   
-  // Event Listeners
+  	// Event Listeners
 	quickAddBtn.addEventListener("click", function(){
 		// display the form div
 		quickAddFormDiv.style.display = "block";
