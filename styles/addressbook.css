@@ -112,6 +112,13 @@ body {
     padding:9px;
 }
 
+
+.entry .update {
+    width:30px;
+    float:left;
+    padding:9px;
+}
+
 .entry p {
     margin:0px;
     font-family:sans-serif;
