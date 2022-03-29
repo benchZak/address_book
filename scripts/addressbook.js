@@ -88,6 +88,18 @@ window.onload = function(){
 	}
    
 	
+	addBookDiv.addEventListener("click", removeEntry);
+	function removeEntry(e){
+		// Remove an entry(JSON) from the addressbook array with the index num = remID
+		if(e.target.classList.contains('delbutton')){
+			var remID = e.target.getAttribute('data-id');
+			addressBook.splice(remID,1);
+			localStorage['addbook'] = JSON.stringify(addressBook);
+			showAddressBook();
+		}
+	}
+
+	
 	
 	showAddressBook();
 
