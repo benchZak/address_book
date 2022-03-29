@@ -92,6 +92,7 @@ window.onload = function(){
 					str += '<div class="email"><p>' + addressBook[n].email + '</p></div>';
 					str += '<div class="phone"><p>' + addressBook[n].phone + '</p></div>';
 					str += '<div class="del"><a href="#" class="delbutton" data-id="' + n + '">Delete</a></div>';
+					str += '<div class="update"><a href="#" class="upbutton" data-id="' + n + '">Update</a></div>';
 					str += '</div>';
 				addBookDiv.innerHTML += str;
 			}
@@ -108,6 +109,13 @@ window.onload = function(){
 			localStorage['addbook'] = JSON.stringify(addressBook);
 			showAddressBook();
 		}
+	}
+
+	addBookDiv.addEventListener("click", updateEntry);
+	function updateEntry(e){
+		// Update an entry(JSON) from the addressbook array with the index num = remID
+		if(e.target.classList.contains('upbutton')){
+					}
 	}
 
 	
