@@ -45,7 +45,9 @@ window.onload = function(){
 	function addToBook(){
 		var isNull = First_name.value!='' && Last_name.value!='' && phone.value!='';
 		
-		if(isNull && ValidateEmail(email.value) ){
+		if(isNull){
+			if(ValidateEmail(email.value))
+			{
 			//Add the contents of the form to the array & localstorage
 			// format the input into a valid JSON structure
 			var obj = new jsonStructure(First_name.value,Last_name.value,phone.value,email.value);
@@ -57,6 +59,7 @@ window.onload = function(){
 			clearForm();
 			// Updating & Displaying all records in the addressbook
 			showAddressBook();
+			}
 		}
 	}
 
