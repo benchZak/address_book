@@ -1,4 +1,8 @@
 // WeUsThem
+// need to add image 
+// foncton check for phnoe and email need to be update
+// incompleted task: Sorting/filtering options and Search 
+
 window.onload = function(){
 	// Buttons
 	var quickAddBtn = document.getElementById('QuickAdd');
@@ -33,6 +37,7 @@ window.onload = function(){
 	
 	AddBtn.addEventListener("click", addToBook);
 	
+	// updating in need
 	function ValidateEmail(input) {
   		var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
  		 if (input.value.match(validRegex)) 
@@ -41,7 +46,7 @@ window.onload = function(){
    			return false;
 	}	
 	
-	
+	// updating in need
 	function ValidatePhone(input) {
   		
  		/* if (input.value.match()) 
