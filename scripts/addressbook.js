@@ -46,6 +46,7 @@ window.onload = function(){
 			//clear the form
 			clearForm();
 			// Updating & Displaying all records in the addressbook
+			showAddressBook();
 		}
 	}
 
