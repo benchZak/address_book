@@ -46,7 +46,6 @@ window.onload = function(){
 			//clear the form
 			clearForm();
 			// Updating & Displaying all records in the addressbook
-			showAddressBook();
 		}
 	}
 
@@ -64,6 +63,32 @@ window.onload = function(){
 		this.email = email;
 	}
 
-
+	
+	function showAddressBook(){
+	// check if the key 'addbook' exists in localStorage or else it
+	// if it exist, load contents from the localStorage and loop > display it on the page
+		if(localStorage['addbook'] === undefined){
+			localStorage['addbook'] = '';
+		} else {
+			addressBook = JSON.parse(localStorage['addbook']);
+			// Loop over the array addressBook and insert into the page
+			addBookDiv.innerHTML = '';
+			for(var n in addressBook){
+				var str = '<div class="entry">';
+					str += '<div class="First_name"><p>' + addressBook[n].First_name + '</p></div>';
+					str += '<div class="Last_name"><p>' + addressBook[n].Last_name + '</p></div>';
+					str += '<div class="email"><p>' + addressBook[n].email + '</p></div>';
+					str += '<div class="phone"><p>' + addressBook[n].phone + '</p></div>';
+					str += '<div class="del"><a href="#" class="delbutton" data-id="' + n + '">Delete</a></div>';
+					str += '</div>';
+				addBookDiv.innerHTML += str;
+			}
+		}
+	}
    
+	
+	
+	showAddressBook();
+
+	
 }
