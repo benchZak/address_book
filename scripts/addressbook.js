@@ -1,7 +1,10 @@
 // WeUsThem
-// need to add image 
+
+/*incompleted task:
+// need to add image Fonctons
 // foncton check for phnoe and email need to be update
-// incompleted task: Sorting/filtering options and Search 
+//  connecting to the server and Sorting/filtering options and Search 
+*/
 
 window.onload = function(){
 	// Buttons
