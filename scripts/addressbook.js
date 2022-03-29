@@ -25,5 +25,12 @@ window.onload = function(){
 		// display the form div
 		quickAddFormDiv.style.display = "block";
 	});
+	
+	cancelBtn.addEventListener("click", function(){
+		quickAddFormDiv.style.display = "none";
+	});
+	
+	
+
    
 }
