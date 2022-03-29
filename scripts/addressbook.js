@@ -8,6 +8,7 @@ window.onload = function(){
  	   // document.getElementsByClassName('quickaddForm')[0]
   
 	// Form Fields
+	var img = document.getElementById("myImg");
 	var First_name = document.getElementById('First_name');
 	var Last_name = document.getElementById('Last_name');
 	var phone = document.getElementById('phone');
@@ -43,11 +44,9 @@ window.onload = function(){
 
 
 	function addToBook(){
-		var isNull = First_name.value!='' && Last_name.value!='' && phone.value!='';
+		var isNull = First_name.value!='' && Last_name.value!='' && phone.value!=''&& email.value!='' ;
 		
-		if(isNull){
-			if(ValidateEmail(email.value))
-			{
+		if(isNull){			
 			//Add the contents of the form to the array & localstorage
 			// format the input into a valid JSON structure
 			var obj = new jsonStructure(First_name.value,Last_name.value,phone.value,email.value);
@@ -58,8 +57,7 @@ window.onload = function(){
 			//clear the form
 			clearForm();
 			// Updating & Displaying all records in the addressbook
-			showAddressBook();
-			}
+			showAddressBook();			
 		}
 	}
 
