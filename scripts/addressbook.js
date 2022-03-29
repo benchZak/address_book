@@ -32,12 +32,26 @@ window.onload = function(){
 	
 	AddBtn.addEventListener("click", addToBook);
 	
+	function ValidateEmail(input) {
+  		var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+ 		 if (input.value.match(validRegex)) {
+  			alert("Valid email address!");
+   			document.form1.text1.focus();
+  		  return true;
+		  } else {
+   			 alert("Invalid email address!");
+   			 document.form1.text1.focus();
+   			 return false;
+  			}
+	}
+
+
 	function addToBook(){
-		var isNull = First_name.value!='' && Last_name.value!='' && phone.value!=''  && email.value!='';
-		if(isNull){
+		var isNull = First_name.value!='' && Last_name.value!='' && phone.value!='';
+		
+		if(isNull && ValidateEmail(email.value) ){
 			//Add the contents of the form to the array & localstorage
 			// format the input into a valid JSON structure
-
 			var obj = new jsonStructure(First_name.value,Last_name.value,phone.value,email.value);
 			addressBook.push(obj);
 			localStorage['addbook'] = JSON.stringify(addressBook);
@@ -63,7 +77,7 @@ window.onload = function(){
 		this.phone = phone;
 		this.email = email;
 	}
-
+	
 	
 	function showAddressBook(){
 	// check if the key 'addbook' exists in localStorage or else it
