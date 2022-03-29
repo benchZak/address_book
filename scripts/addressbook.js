@@ -41,7 +41,14 @@ window.onload = function(){
    			return false;
 	}	
 	
-
+	
+	function ValidatePhone(input) {
+  		
+ 		/* if (input.value.match()) 
+  		  	return true;
+		 else 
+   			return false;*/
+	}	
 
 	function addToBook(){
 		var isNull = First_name.value!='' && Last_name.value!='' && phone.value!=''&& email.value!='';
@@ -115,9 +122,8 @@ window.onload = function(){
 	function updateEntry(e){
 		// Update an entry(JSON) from the addressbook array with the index num = remID
 		if(e.target.classList.contains('upbutton')){
-					}
+		}
 	}
-
 	
 	
 	showAddressBook();
