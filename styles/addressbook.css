@@ -80,12 +80,19 @@ body {
 }
 
 
-.entry .name {
+.entry .First_name {
     width:130px;
     float:left;
     padding:11px;
 }
 
+
+
+.entry .Last_name {
+    width:130px;
+    float:left;
+    padding:11px;
+}
 .entry .email {
     width:200px;
     float:left;
@@ -94,18 +101,6 @@ body {
 
 
 .entry .phone {
-    width:100px;
-    float:left;
-    padding:11px;
-}
-
-.entry .address {
-    width:250px;
-    float:left;
-    padding:11px;
-}
-
-.entry .city {
     width:100px;
     float:left;
     padding:11px;
