@@ -32,6 +32,37 @@ window.onload = function(){
 	
 	AddBtn.addEventListener("click", addToBook);
 	
+	function addToBook(){
+		var isNull = First_name.value!='' && Last_name.value!='' && phone.value!=''  && email.value!='';
+		if(isNull){
+			//Add the contents of the form to the array & localstorage
+			// format the input into a valid JSON structure
+
+			var obj = new jsonStructure(First_name.value,Last_name.value,phone.value,email.value);
+			addressBook.push(obj);
+			localStorage['addbook'] = JSON.stringify(addressBook);
+			// Hide the form panel
+			quickAddFormDiv.style.display = "none";
+			//clear the form
+			clearForm();
+			// Updating & Displaying all records in the addressbook
+			showAddressBook();
+		}
+	}
+
+	
+	function clearForm(){
+		var formFields = document.querySelectorAll('.formFields');
+		for(var i in formFields){
+			formFields[i].value = '';
+		}
+	}
+	function jsonStructure(First_name,Last_name,phone,email){
+		this.First_name = First_name;
+		this.Last_name = Last_name;
+		this.phone = phone;
+		this.email = email;
+	}
 
 
    
